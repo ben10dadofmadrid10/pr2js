@@ -1,0 +1,52 @@
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ejercicio 02 - ¿Es igual a 100 o no?</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>🏷️ Ejercicio 02: ¿Es igual a 100 o no?</h2>
+
+    <div class="instrucciones">
+      <h3>📋 Instrucciones</h3>
+      <p>En este ejercicio comprobaremos si una variable llamada <b>valor</b> es igual a <b>100</b>.  
+         Si lo es, aparecerá un mensaje de felicitación ✅.  
+         Si no lo es, aparecerá un mensaje alternativo ❌.</p>
+    </div>
+
+ 
+    <div id="mensaje">Haz clic en el botón para verificar.</div>
+
+    <button class="btn" onclick="verificarValor()">¡Ejecutar Ejercicio!</button>
+
+    <footer>Curso de JavaScript · Enseñanza Media | Ejercicio 02 - If/Else</footer>
+  </div>
+
+
+  <script>
+    function verificarValor(){
+
+      const valor = 85;  
+      const nodo = document.getElementById('mensaje');
+
+
+      nodo.classList.remove('mensaje-correcto', 'mensaje-incorrecto');
+
+      if (valor === 100) {
+        nodo.innerText = "✅ ¡Correcto! El valor es exactamente igual a 100.";
+        nodo.classList.add('mensaje-correcto');
+      } else {
+        nodo.innerText = "❌ El valor NO es 100.";
+        nodo.classList.add('mensaje-incorrecto');
+      }
+    }
+  </script>
+</body>
+</html>
+
